@@ -4,12 +4,7 @@ from database import get_all_posts, _save_to_database
 app = Flask(__name__)
 
 posts = get_all_posts()
-# posts = {
-#     1: {'id': 1,
-#         'title': "First Post",
-#         'content': "Hello. My name is Shreyash. I am writing a Flask Web-application that uses a SQLite database"
-#     }
-# }
+# Posts are a Dictionary of Key-Value Pairs...
 
 
 @app.route('/')
