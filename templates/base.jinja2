@@ -4,11 +4,32 @@
     <meta charset="UTF-8">
 </head>
 <body>
-<a href="{{ url_for('home') }}">Home</a>
-        {% block content %}
+{% extends "bootstrap/base.html" %}
+
+{% block navbar %}
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <div class="navbar-brand">
+                        <a href="{{ url_for('home') }}">S-Blogger</a>
+                    </div>
+                </div>
+                
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('create') }}">Create New Post</a></li>
+                    <li><a href="#"> Contacts </a></li>
+                </ul>
+                
+            </div>
+        </nav>
+{% endblock %}
 
 
-        {% endblock %}
-<a href="{{ url_for('create') }}">Create New Post</a>
+{% block content %}
+
+
+{% endblock %}
+
+
 </body>
 </html>

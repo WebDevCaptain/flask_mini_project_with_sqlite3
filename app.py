@@ -1,10 +1,17 @@
 from flask import Flask, render_template, request, url_for, redirect
 from database import get_all_posts, _save_to_database
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
+bootstrap = Bootstrap(app)
 
 posts = get_all_posts()
-# Posts are a Dictionary of Key-Value Pairs...
+# posts = {
+#     1: {'id': 1,
+#         'title': "First Post",
+#         'content': "Hello. My name is Shreyash. I am writing a Flask Web-application that uses a SQLite database"
+#     }
+# }
 
 
 @app.route('/')
